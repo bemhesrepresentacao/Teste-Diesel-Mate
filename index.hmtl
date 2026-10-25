@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><title>Diesel Mate - Bemhes Representação</title>
+  <style>
+    body { font-family: sans-serif; line-height: 1.6; margin: 0; background: #f9f9f9; padding: 20px; }
+    .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    h1 { color: #004b87; }
+    ul { margin-bottom: 20px; }
+    .btn-wsp { display: inline-block; background: #25d366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    .btn-back { display: inline-block; margin-bottom: 15px; color: #004b87; text-decoration: none; font-weight: bold; }
+    
+    /* Container pai */
+.container-flex {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: stretch; /* Garante que ambas tenham a mesma altura */
+}
+
+/* Estilo padrão das caixas */
+.caixa {
+  flex: 1;
+  background-color: #f4f4f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* Ajuste específico para a caixa da imagem */
+.caixa-com-imagem {
+  padding: 0;          /* Remove o padding interno para a imagem colar nas bordas */
+  overflow: hidden;    /* Esconde qualquer excesso e respeita o arredondamento */
+}
+
+/* Estilo da imagem para preencher a caixa perfeitamente */
+.caixa-com-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* Faz a imagem preencher o espaço sem distorcer */
+  display: block;
+}
+
+/* Responsividade: No celular, uma fica em cima da outra */
+@media (max-width: 600px) {
+  .container-flex {
+    flex-direction: column;
+  }
+  
+  /* Define uma altura fixa para a imagem no celular, se preferir */
+  .caixa-com-imagem {
+    height: 250px; 
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.htm#catalago" class="btn-back">&larr; Voltar à Página Inicial</a>
+    <h1>Diesel Mate</h1>
+    <h3>Aditivo completo desenvolvido para melhorar o desempenho do diesel</h3>
+    
+    <div class="container-flex">
+  <!-- Caixa da Esquerda com Imagem -->
+  <div class="caixa caixa-com-imagem">
+    <img src="caminho-da-sua-imagem.jpg" alt="Descrição da imagem">
+  </div>
+  
+  <!-- Caixa da Direita com Conteúdo -->
+  <div class="caixa">
+    <h3>Caixa 2</h3>
+    <p>Conteúdo da segunda caixa, textos ou botões.</p>
+  </div>
+</div>
+
+
+    
+    <h4>Principais Características e Benefícios:</h4>
+    <ul>
+      <li>Melhora o rendimento do combustível e estende a vida útil do equipamento[cite: 2]</li>
+      <li>Aumenta o número de Cetano em até 10% (3 a 4 pontos)[cite: 2]</li>
+      <li>Reduz emissões de fumaça preta, fuligem e gases de combustão[cite: 2]</li>
+      <li>Reduz desgaste e atrito em injetores e bombas[cite: 2]</li>
+      <li>Eficiente em diesel ULSD (ultrabaixo teor de enxofre) e biodiesel[cite: 2]</li>
+      <li>Limpa injetores atendendo aos testes Cummins L-10[cite: 2]</li>
+      <li>Contém desemulsificante, inibidores de corrosão e oxidação[cite: 2]</li>
+    </ul>
+
+    <h4>Aplicações:</h4>
+    <p>Motores a diesel rodoviário e marinho, geradores de energia e armazenamento de diesel a curto e longo prazo[cite: 2].</p>
+
+    <br>
+    <a href="https://wa.me/5543988428240?text=Olá!%20Gostaria%20de%20solicitar%20uma%20cotação/visita%20para%20o%20produto%20Diesel%20Mate." class="btn-wsp" target="_blank">Pedir Cotação / Agendar Visita pelo WhatsApp</a>
+  </div>
+</body>
+</html>
