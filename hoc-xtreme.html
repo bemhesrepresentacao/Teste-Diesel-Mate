@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"><title>HOC Xtreme - Bemhes Representação</title>
+  <meta charset="UTF-8"><title>Diesel Mate - Bemhes Representação</title>
   <style>
     body { font-family: sans-serif; line-height: 1.6; margin: 0; background: #f9f9f9; padding: 20px; }
     .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
@@ -9,25 +9,244 @@
     ul { margin-bottom: 20px; }
     .btn-wsp { display: inline-block; background: #25d366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
     .btn-back { display: inline-block; margin-bottom: 15px; color: #004b87; text-decoration: none; font-weight: bold; }
+
+    /* Container pai */
+.container-flex {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: stretch; /* Garante que ambas tenham a mesma altura */
+}
+
+/* Estilo padrão das caixas */
+.caixa {
+  flex: 1;
+  background-color: #084cc2;
+  padding: 20px;
+    border-radius: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+    .caixa {
+  background-color: #084cc2;
+  color: #ffffff;          /* Deixa o texto branco para destacar no fundo azul */
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 18px;         /* Aumenta o texto geral de dentro da caixa */
+}
+
+/* Ajuste específico para a caixa da imagem */
+.caixa-com-imagem {
+  padding: 0;          /* Remove o padding interno para a imagem colar nas bordas */
+  overflow: hidden;    /* Esconde qualquer excesso e respeita o arredondamento */
+}
+
+/* Estilo da imagem para preencher a caixa perfeitamente */
+.caixa-com-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* Faz a imagem preencher o espaço sem distorcer */
+  display: block;
+}
+
+/* Responsividade: No celular, uma fica em cima da outra */
+@media (max-width: 600px) {
+  .container-flex {
+    flex-direction: column;
+  }
+  
+  /* Define uma altura fixa para a imagem no celular, se preferir */
+  .caixa-com-imagem {
+    height: 250px; 
+  }
+  /* Estilo específico para a caixa com tabela */
+.caixa-tabela {
+  background-color: #ffffff; /* Fundo branco para a caixa */
+  color: #333333;            /* Cor padrão do texto para o fundo branco */
+  background-color: #084cc2;
+  color: #ffffff;          /* Deixa o texto branco para destacar no fundo azul */
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 18px; 
+  /* Se quiser remover o padding para a tabela ocupar toda a caixa, remova o comentário abaixo: */
+  /* padding: 0; */
+}
+
+/* Estilização básica da tabela para ocupar 100% */
+.caixa-tabela table {
+  width: 100%;
+  border-collapse: collapse;
+  height: 100%; /* Ajuda a preencher a altura da caixa se necessário */
+}
+
+.caixa-tabela th, 
+.caixa-tabela td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 10px solid rgba(0, 0, 255, 0.2); /* Linha sutil no fundo azul */
+}
+
+.caixa-tabela th {
+  background-color: rgba(0, 0, 0, 0.15); /* Um tom mais escuro para o cabeçalho */
+  font-weight: bold;
+}
+}
+
+/* Caixa específica com fundo branco */
+.caixa.caixa-branca {
+  background-color: #ffffff; /* Fundo branco */
+  color: #333333;            /* Texto escuro para dar contraste */
+  border: 1px solid #ddd;    /* Borda cinza para destacar */
+}
+
+/* Garante que os títulos também fiquem com cor escura nesta caixa */
+.caixa.caixa-branca h4 {
+  color: #084cc2;            /* Opcional: coloquei o azul da sua marca para destacar os títulos */
+}
+    
   </style>
 </head>
 <body>
   <div class="container">
-    <a href="index.html" class="btn-back">&larr; Voltar à Página Inicial</a>
-    <h1>HOC Xtreme</h1>
-    <h3>Óleo Hidráulico de Alto Desempenho com Molysol</h3>
-    <p><strong>Viscosidades:</strong> ISO 22, 32, 46 e 68[cite: 7].</p>
+    <a href="index.htm#catalago" class="btn-back">&larr; Voltar à Página Inicial</a>
+    <h1>Diesel Mate</h1>
+    <h3>Aditivo completo desenvolvido para melhorar o desempenho do diesel</h3>
+
+  <div class="container-flex">
+  <!-- Caixa da Esquerda com Imagem -->
+  <div class="caixa caixa-com-imagem">
+    <img src="Imagem Diesel Mate2.png" alt="Diesel Mate">
+  </div>
+  
+  <!-- Caixa da Direita com Conteúdo -->
+  <div class="caixa">
+    <li>MELHORA O RENDIMENTO DO DIESEL</li>
+    <li>AUMENTA O NÚMERO DE CETANO</li>
+    <li>ESTENDE A VIDA ÚTIL DO EQUIPAMENTO</li>
+    <li>REDUZ EMISSÕES</li>
+    <li>EFICIENTE EM DIESEL DE TEOR</li>
+    <li>ULTRABAIXO DE ENXOFRE E BIODIESEL</li>
+  </div>
+</div>
     
-    <h4>Diferenciais Técnicos:</h4>
+    <h1>PRINCIPAIS CARACTERISTICAS E BENEFICIOS</h1>
     <ul>
-      <li>Dura até 6.000 horas (ASTM D943) com intervalos de troca estendidos[cite: 7]</li>
-      <li>Formulado com Molysol (composto sintético de molibdênio)[cite: 7]</li>
-      <li>Evita cavitação e previne o desgaste de bombas, paletas e pistões[cite: 7]</li>
-      <li>Atende Parker Denison HF-0/HF-2, Eaton-Vickers, DIN 51524, etc[cite: 7].</li>
+      <h3>AUMENTA O CETANO EM ATÉ 10 %</h3>
+      <p>Melhora  a ignição, reduzindo o tempo de ignição e o desgaste por detonação ao aumentar o número de Cetano em 3 a 4 pontos, em média.</p>
+    </ul>
+    <ul>
+      <h3>REDUZ EMISSÕES</h3>
+      <p>Ajuda a cumprir com as leis de emissões atmosféricas ao proporcionar uma queima de combustível mais limpa, reduzindo emissões de fumaça preta, fuligem e gases de combustão.</p>
+    </ul>
+    <ul>
+      <h3>REDUZ O DESGASTE E O ATRITO</h3>
+      <p>Contém um aditivo polimérico antidesgaste que lubrifica e protege os injetores e bombas do desgaste químico e mecânico causado pelo diesel de teor ultra baixo de enxofre. Não contém enxofre.</p>
+    </ul>
+    <ul>
+      <h3>LIMPA INJETORES E BOMBAS</h3>
+      <p>Alto poder de detergência que limpa bombas de combustível, injetores e linhas de combustível, além de dispersar os contaminantes, prevenindo a formação de goma, laca e borra de carbono. Cumpre com os testes mais recentes de limpeza de injetores CumminsL-10.</p>
+    </ul>
+    <ul>
+      <h3>CONTÉM DESATIVADORES DE METAL</h3>
+      <p>Desativa resíduos de metais pesados, especialmente de cobre. Isto previne que atuem como catalisadores de reações que resultam em turvação e formação de borra.</p>
     </ul>
 
+
+    <div class="container-flex">
+  <!-- Caixa da Esquerda com Imagem -->
+  <div class="caixa caixa-com-imagem">
+    <img src="Imagem Diesel Mate.jpg" alt="Diesel Mate">
+  </div>
+  
+  <!-- Caixa da Direita com Conteúdo -->
+  <div class="caixa">
+    <li>Veículos de serviço</li>
+    <li>Demolição e escavação</li>
+    <li>Construção</li>
+    <li>Pavimentação</li>
+    <li>Universidades e hotéis</li>
+    <li>Veículos de emergência</li>
+    <li>Marinas</li>
+    <li>Agricultura</li>
+  </div>
+</div>
+---------------
+<div class="container-flex">
+  <!-- Caixa de Texto / Padrão -->
+  <div class="caixa caixa-branca">
+    <h4 style="text-align: center;">IDEAL PARA:</h4>
+<p>Motores a diesel rodoviário e marinho;</p>
+<p>Geradores de energia;</p>
+<p>Armazenamento de diesel a curto ou longo prazo.</p>
+
+<h4 style="text-align: center;">NÃO UTILIZAR EM:</h4>
+<li>Motores a gasolina;</li>
+<li>Armazenamento de gasolina;</li>
+<li>Outros combustíveis de aquecimento.</li>
+
+
+  <h4 style="text-align: center;">REQUISITOS DE DESEMPENHO:</h4>
+<p>Para um melhor desempenho, utilize em conjunto como Programa de Qualidade do Diesel. Motores muito usados e consequentemente muito sujos devem ter seus bicos injetores ajustados após o uso de 2 ou 3 tanques de diesel tratado com Diesel Mate. O ajuste irá permitir a redução de consumo e o máximo aproveitamento do motor.</p>
+  </div>
+
+ <!-- Nova Caixa com Tabela -->
+<div class="caixa-tabela">
+  <table>
+    <thead>
+      <tr>
+        <!-- colspan="2" faz este cabeçalho ocupar o espaço das duas colunas -->
+        <th colspan="2" style="text-align: center;">PACOTE COMPLETO DE ADITIVOS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Linha opcional para manter os títulos das colunas abaixo, se quiser -->
+      <tr>
+        <td style="font-weight: bold; background-color: #f1f3f5;">Aditivo</td>
+        <td style="font-weight: bold; background-color: #f1f3f5;">Descrição</td>
+      </tr>
+      <tr>
+        <td>Amplificador de número de Cetano</td>
+        <td>Eleva o número de Cetano em 3 ou 4 pontos, na média, e ajuda a aumentar o rendimento, melhorar a combustão e facilitar a ignição.</td>
+      </tr>
+      <tr>
+        <td>Desemulsificante</td>
+        <td>Previne a emulsificação e separa a água e condensado para o fundo dos tanques de armazenamento, de onde podem ser drenados ou removidos por bombeamento. Elimina contaminantes da fase de água, melhorando a combustão e reduzindo as obstruções em injetores e filtros de água.</td>
+      </tr>
+      <tr>
+        <td>Agentes antidesgaste</td>
+        <td>Contém um composto molecular que forma uma película lubrificante de alta resistência. Esta película se une a superfície metálica e protege contra desgastes mecânicos e corrosivos.</td>
+      </tr>
+      <tr>
+        <td>Detergentes e dispersantes</td>
+        <td>Previne a formação de lodos, vernizes e gomas que podem obstruir filtros, linhas de combustível e bicos de injetores.</td>
+      </tr>
+      <tr>
+        <td>Melhoradores de Fluxo a Frio</td>
+        <td>Melhora o fluxo de combustível, capacidade de ignição e eficiência de operação em baixas temperaturas, prevenindo a gelificação do combustível. </td>
+      </tr>
+      <tr>
+        <td>Inibidores de Oxidação</td>
+        <td>Ajuda a prevenir a decomposição do combustível durante o armazenamento e reduz a formação de vernizes, laca, goma e lodos. </td>
+      </tr>
+      <tr>
+        <td>Inibidores de ferrugem e corrosão</td>
+        <td>Reveste as superfícies metálicas em tanques de armazenamento, tanques de combustível, linhas de combustível e injetores, prevenindo danos corrosivos.  Reduz os gastos com reparos e reduz os contaminantes que obstruem bicos de injetores e filtros. </td>
+      </tr>
+      <tr>
+        <td>Desativadores de Metal</td>
+        <td>Desativa resíduos de metais pesados, especialmente de cobre, prevenindo que estes metais hajam como catalisadores de reações que resultam em oxidação e formação de goma incombustível no motor. </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+----------------
+
+    <h4>Aplicações:</h4>
+    <p>Motores a diesel rodoviário e marinho, geradores de energia e armazenamento de diesel a curto e longo prazo[cite: 2].</p>
+
     <br>
-    <a href="https://wa.me/5543988428240?text=Olá!%20Gostaria%20de%20solicitar%20uma%20cotação/visita%20para%20o%20HOC%20Xtreme." class="btn-wsp" target="_blank">Pedir Cotação / Agendar Visita pelo WhatsApp</a>
+    <a href="https://wa.me/5543988428240?text=Olá!%20Gostaria%20de%20solicitar%20uma%20cotação/visita%20para%20o%20produto%20Diesel%20Mate." class="btn-wsp" target="_blank">Pedir Cotação / Agendar Visita pelo WhatsApp</a>
   </div>
 </body>
 </html>
